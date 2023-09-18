@@ -1,0 +1,16 @@
+[
+  {
+    "phoneNumber": "087872753959",
+    "name": "Hanif",
+    "account": {
+      "email": "hanif.widyanto@ioh.co.id",
+      "password": "fjO79yi8b"
+    },
+    "listBike": [
+      "B4190EAB",
+      "B4798TIB"
+    ],
+    "chooseBikeToday": 1,
+    "bookTonight": null
+  }
+]

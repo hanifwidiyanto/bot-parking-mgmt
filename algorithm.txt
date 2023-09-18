@@ -1,0 +1,46 @@
+requirement:
+
+1. list akun json berupa
+- no whatsapp
+- nama
+- email
+- password
+- list array motor yang didaftar
+
+2. package:
+whatsaap web
+puppeteer
+node cron
+chalk
+
+3. installment
+server
+no whatsapp gakepake
+
+=======
+
+algoritma
+
+1. start / restart by wa admin jika ada akun baru
+
+2. disuruh input no whatsapp, name, email, password
+
+3. kalo udah input dia nge check list kendaraannya
+
+4. kalo udah ok dia akan stand by sampe jam 19.00 untuk chat ke semua daftar no whatsapp, apakah mau reservasi atau tidak
+
+5. jika tidak berarti tidak. jika iya dia akan reservasi
+
+6. login 23.59, sukses, tunggu sampe 00.1 terus dia reserverasi dan pilih motor sesuai yg di request dari wa tadi
+
+7. kalo udah dia akan copy link qr code nya. terus kirim ke whatsapp. (next fitur akan ngirim qr code nya langsung by image)
+
+8. selamat menikmati, semoga terlayani.
+
+===
+
+Need to do
+
+1. setup whatsapp web,
+2. setup node cron for whatsap web and for the bot
+3. get image qr code
