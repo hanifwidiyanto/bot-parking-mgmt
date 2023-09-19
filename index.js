@@ -9,6 +9,21 @@ import moment from 'moment';
 import UserAgent from 'user-agents';
 import cron from 'node-cron'
 import fs from 'fs';
+import express from 'express'
+
+const app = express()
+const port = 3000;
+
+app.get('/check', (req,res)=>{
+res.send('success');
+});
+
+app.listen(port, () => {
+  console.log(`Server berjalan di http://localhost:${port}`);
+});
+
+
+
 const userAgent = new UserAgent();
 
 function delay(time) {
@@ -27,7 +42,7 @@ const getDataBike = async (account) => {
 
     const browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        headless: false,
+        headless: true,
         executablePath: executablePath()
     });
 
@@ -115,7 +130,7 @@ const getParking = async (account, bikeChoosed) => {
 
     const browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        headless: false,
+        headless: true,
         executablePath: executablePath()
     });
 
@@ -176,7 +191,9 @@ const runAtMidnight = async () => {
     }
 };
 
-cron.schedule('1 0 * * *', () => {
+console.log(new Date().toLocaleString());
+
+cron.schedule('1 17 * * *', () => {
     console.log(`[${time()}] Menjalankan kode pada jam 00:01`);
     runAtMidnight();
 });
