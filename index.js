@@ -20,8 +20,6 @@ const time = () => {
     return chalk.green(moment().format('LTS'))
 }
 
-import readlineSync from 'readline-sync';
-
 const getDataBike = async (account) => {
     const { email, password } = account
 
